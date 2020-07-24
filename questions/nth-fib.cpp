@@ -28,6 +28,6 @@ string nthfib(int n)
 }
 int main()
 {
-    int n=10000;
+    int n=100000;
     cout<<"\n"<<n<<"th fib number is "<<nthfib(n)<<"\n";
 }
