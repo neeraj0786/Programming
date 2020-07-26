@@ -18,16 +18,17 @@ string add(string s1,string s2)
 }
 string nthfib(int n)
 {
-    vector<string> v;
-    v.push_back("0"),v.push_back("1");
-    if(n<2) return v[n];
+    string a,b,c;
+    a="0",b="1";
+    if(n<2) ;
     for(int i=2;i<=n;i++)
-    v.push_back(add(v[i-1],v[i-2]));
-    reverse(v[n].begin(),v[n].end());
-    return v[n];
+    c=add(a,b),a=b,b=c;
+    reverse(c.begin(),c.end());
+    return c;
 }
 int main()
 {
-    int n=100000;
-    cout<<"\n"<<n<<"th fib number is "<<nthfib(n)<<"\n";
+    int n=100;
+    string s=nthfib(100);
+    cout<< s.back()<<" "<<s;
 }
